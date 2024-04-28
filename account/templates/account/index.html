@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Index{% endblock %}
+
+{% block body %}
+<div class="container mb-5">
+    <div class="row">
+        <div class="col text-center">
+            <a href="https://docs.djangoproject.com/en/5.0/topics/auth/default/#django.contrib.auth.views.PasswordChangeView"
+               target="_blank">https://docs.djangoproject.com/en/5.0/topics/auth/default/#django.contrib.auth.views.PasswordChangeView</a>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col-4 shadow-lg">
+            <ul>
+                <li>class PasswordChangeView</li>
+
+                <li>class PasswordChangeDoneView</li>
+            </ul>
+        </div>
+
+        <div class="col-4 shadow-lg">
+            <ul>
+                <li>class PasswordResetView</li>
+                <li>class PasswordResetDoneView</li>
+                <li>class PasswordResetConfirmView</li>
+                <li>class PasswordResetCompleteView</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-4 shadow-lg">
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'account:change-password' %}" class="btn btn-primary">Modifier son
+                password</a>
+            {% else %}
+            <a href="{% url 'account:reset' %}" class="btn btn-primary">Reset son
+                password</a>
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
