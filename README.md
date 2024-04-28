@@ -42,4 +42,4 @@ using PasswordResetTokenGenerator.
 
 ### Email Host Password
 
-The EMAIL_HOST_PASSWORD should be defined within your .env file.# manage-users-password
+The EMAIL_HOST_PASSWORD should be defined within your .env file.
