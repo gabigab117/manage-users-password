@@ -138,3 +138,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'gabrieltrouve5@gmail.com'
 EMAIL_HOST_PASSWORD = env('EMAIL_PW')
 DEFAULT_FROM_EMAIL = 'Mon super site<gabrieltrouve5@gmail.com>'
+
+# PASSWORD_RESET_TIMEOUT = 10
