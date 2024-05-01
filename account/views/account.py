@@ -25,6 +25,7 @@ def signup_view(request):
             user.save()
             try:
                 send_email_verification(request, user)
+                messages.add_message(request, messages.INFO, "Mail envoyé pour activation")
             except SMTPException:
                 # Log
                 pass
